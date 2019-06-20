@@ -1,0 +1,16 @@
+---
+- nodeset:
+    name: single-cloud-fedora-29-node
+    nodes:
+      - name: primary
+        label: cloud-fedora-29
+
+- project:
+    name: rdo-infra/ansible-role-tripleo-ci-zuul-runner
+    check:
+      jobs:
+        - tox-linters
+
+    gate:
+      jobs:
+        - tox-linters
