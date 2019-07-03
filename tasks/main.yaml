@@ -1,0 +1,7 @@
+---
+- name: Gather needed facts
+  setup:
+    gather_subset: "!min,processor,user_dir"
+
+- name: Starting zuul-runner-reproducer
+  include_tasks: zuul-runner-reproducer.yaml
