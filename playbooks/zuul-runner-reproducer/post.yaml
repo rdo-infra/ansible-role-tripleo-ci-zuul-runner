@@ -1,0 +1,7 @@
+---
+- hosts: primary
+  tasks:
+  - name: Finishing deployment
+    debug:
+      msg: "Zuul-runner deployment finished"
+  
