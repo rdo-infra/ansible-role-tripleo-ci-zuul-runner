@@ -1,0 +1,16 @@
+---
+# If zuul runner should be executed or not
+zuul_runner: true
+
+# Change in gerrit that contains the zuul-runner code.
+# This is necessary until the code get merged upstream
+fetch_ref: "refs/changes/55/657955/4"
+
+# Just a tag reference
+tag_ref: "55-657955-4"
+
+# The pod name to be used by pod to gring services up
+pod_name: "zuul-runner-services"
+
+# Directory where zuul will be download and installed
+zuul_src_dir: '{{ lookup("env", "HOME") }}/.cache/zuul/'
