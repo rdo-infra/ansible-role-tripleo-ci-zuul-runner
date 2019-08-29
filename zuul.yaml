@@ -31,7 +31,7 @@
 - job:
     name: tripleo-ci-zuul-runner-reproducer-fedora-29-host
     parent: tripleo-ci-zuul-runner-reproducer-host
-    nodeset: single-cloud-fedora-29-node
+    nodeset: single-cloud-fedora-30-node
 
 - project:
     check:
