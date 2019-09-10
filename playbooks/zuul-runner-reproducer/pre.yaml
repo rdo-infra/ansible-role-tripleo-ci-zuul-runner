@@ -38,15 +38,6 @@
       debug:
         var: reproducer_role_top_dir
 
-    - name: Install python dependencies
-      register: result
-      until: result is success
-      pip:
-        requirements: "{{ reproducer_role_top_dir }}/requirements.txt"
-        extra_args: --user --force
-      retries: 3
-      delay: 5
-
     # Adding changed_when to this command for linting error
     # https://github.com/ansible/ansible-lint/issues/165
     # Pipe true because bindep always returns code 1 (error)
@@ -74,3 +65,12 @@
         - gcc-c++
         - re2-devel
         - python3-devel
+
+    - name: Install python dependencies
+      register: result
+      until: result is success
+      pip:
+        requirements: "{{ reproducer_role_top_dir }}/requirements.txt"
+        extra_args: --user --force
+      retries: 3
+      delay: 5
