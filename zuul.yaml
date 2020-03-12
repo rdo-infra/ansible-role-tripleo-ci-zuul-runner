@@ -29,16 +29,15 @@
       nodepool_provider: host
 
 - job:
-    name: tripleo-ci-zuul-runner-reproducer-fedora-30-host
+    name: tripleo-ci-zuul-runner-reproducer-fedora-31-host
     parent: tripleo-ci-zuul-runner-reproducer-host
-    voting: false
-    nodeset: single-fedora-30-node
+    nodeset: single-fedora-31-node
 
 - project:
     check:
       jobs:
         - tox-linters
-        - tripleo-ci-zuul-runner-reproducer-fedora-30-host
+        - tripleo-ci-zuul-runner-reproducer-fedora-31-host
     gate:
       jobs:
         - tox-linters
