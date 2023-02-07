@@ -29,9 +29,9 @@
       nodepool_provider: host
 
 - job:
-    name: tripleo-ci-zuul-runner-reproducer-fedora-32-host
+    name: tripleo-ci-zuul-runner-reproducer-fedora-rawhide-host
     parent: tripleo-ci-zuul-runner-reproducer-host
-    nodeset: single-fedora-32-node
+    nodeset: single-fedora-rawhide-node
 
 - project:
     check:
