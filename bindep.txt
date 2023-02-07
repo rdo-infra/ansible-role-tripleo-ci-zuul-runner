@@ -1,6 +1,7 @@
 # epel-release is required for python-pip
 # epel is not installed on nodepool nodes.
 ansible [platform:rpm !platform:centos-8]
+cargo [platform:rpm]
 docker [platform:rpm !platform:centos-8]
 epel-release [platform:centos]
 gcc [platform:rpm]
@@ -15,5 +16,6 @@ python-netaddr [platform:centos-7]
 python-setuptools [platform:centos-7]
 python-virtualenv [platform:centos-7]
 python-pip [platform:centos-7]
+rust [platform:rpm]
 rsync [platform:rpm]
 yum-utils [platform:centos]
